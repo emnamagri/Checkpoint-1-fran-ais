@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Utilisateur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="gomycode.png" alt="Logo de l'entreprise" class="logo">
+        <h1>Étape 1 : Inscription Utilisateur</h1>
+        <h2>Pratique des 7 Principes de Test</h2>
+    </header>
+
+    <main>
+        <!-- Le formulaire appelle la fonction validerFormulaire au moment de la soumission -->
+        <form id="registration-form" onsubmit="return validerFormulaire()">
+            <div class="input-group">
+                <label for="name">Nom complet :</label>
+                <input type="text" id="name" name="name" required>
+                <span id="name-error" class="error-message">Le nom est requis.</span>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <span id="email-error" class="error-message">Format d'email invalide.</span>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" required>
+                <span id="password-error" class="error-message">Le mot de passe doit contenir au moins 6 caractères.</span>
+            </div>
+
+            <div class="input-group">
+                <label for="confirm-password">Confirmer le mot de passe :</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <span id="confirm-password-error" class="error-message">Les mots de passe doivent correspondre.</span>
+            </div>
+
+            <button type="submit">S'inscrire</button>
+        </form>
+
+        <div id="test-results">
+            <h3>Résultats des Tests</h3>
+            <ul id="results-list"></ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GOMYCODE</p>
+    </footer>
+
+    <!-- Assurez-vous que le fichier script.js est bien inclus -->
+    <script src="script.js"></script>
+</body>
+</html>
